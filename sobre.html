@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - PM AUTO</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo-area">
+        <img src="imagens/logo.jpg" alt="Logo">
+        <div>
+            <h2>PM AUTO</h2>
+            <p>Peças e Acessórios</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sobre.html" class="active">SOBRE</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contacto.html">Contactos</a>
+    </nav>
+
+</header>
+
+
+<!-- SOBRE -->
+<section class="sobre">
+
+    <div class="sobre-container">
+
+        <h1>Sobre Nós</h1>
+
+        <p class="intro">
+            Bem-vindo à <strong>PM AUTO</strong>.
+        </p>
+
+        <p>
+            A PM AUTO nasceu com uma missão simples: ajudar motoristas,
+            mecânicos e empresas a encontrar peças automóveis de qualidade
+            de forma rápida, segura e acessível.
+        </p>
+
+        <p>
+            Sabemos que um veículo parado representa perda de tempo e dinheiro.
+            Por isso, trabalhamos para oferecer soluções rápidas, atendimento
+            direto e produtos confiáveis para diferentes marcas e modelos de veículos.
+        </p>
+
+        <h2>A Nossa História</h2>
+
+        <p>
+            A PM AUTO iniciou as suas atividades em 2022, em Maputo,
+            com o objetivo de facilitar o acesso a peças e acessórios automotivos.
+        </p>
+
+        <p>
+            Tudo começou com uma pequena operação dedicada à procura e fornecimento
+            de peças para clientes locais. Com o tempo, graças à confiança dos
+            nossos clientes, expandimos os nossos serviços e aumentámos a variedade
+            de produtos disponíveis.
+        </p>
+
+        <p>
+            Hoje continuamos a crescer, mantendo os mesmos valores:
+            honestidade, compromisso e dedicação ao cliente.
+        </p>
+
+        <h2>O Que Fazemos</h2>
+
+        <ul>
+            <li>✓ Motores e componentes</li>
+            <li>✓ Sistemas de suspensão</li>
+            <li>✓ Travagem e segurança</li>
+            <li>✓ Caixa de velocidades</li>
+            <li>✓ Óleos e filtros</li>
+            <li>✓ Acessórios automotivos</li>
+        </ul>
+
+        <h2>A Nossa Missão</h2>
+        <p>Fornecer peças e serviços automotivos de qualidade, com preços justos e atendimento eficiente.</p>
+
+        <h2>A Nossa Visão</h2>
+        <p>Ser referência em Moçambique no fornecimento de peças automotivas.</p>
+
+        <h2>Os Nossos Valores</h2>
+
+        <ul>
+            <li>✓ Honestidade</li>
+            <li>✓ Qualidade</li>
+            <li>✓ Responsabilidade</li>
+            <li>✓ Rapidez no atendimento</li>
+            <li>✓ Respeito ao cliente</li>
+        </ul>
+
+        <h2>Por Que Escolher a PM AUTO?</h2>
+
+        <ul>
+            <li>✓ Atendimento direto e profissional</li>
+            <li>✓ Peças de qualidade</li>
+            <li>✓ Preços acessíveis</li>
+            <li>✓ Soluções rápidas</li>
+            <li>✓ Procura eficiente de peças</li>
+        </ul>
+
+        <p class="final">
+            Na PM AUTO, o cliente fala e nós resolvemos.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ANIMAÇÃO SAÍDA -->
+<script>
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(e){
+        const href = this.getAttribute("href");
+
+        if(href && href !== "#"){
+            e.preventDefault();
+
+            document.body.classList.add("slide-out");
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 400);
+        }
+    });
+});
+</script>
+
+
+<!-- ACTIVE MENU -->
+<script>
+const links = document.querySelectorAll("nav a");
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    if(linkPage === currentPage || (currentPage === "" && linkPage === "index.html")){
+        link.classList.add("active");
+    }
+});
+</script>
+
+</body>
+</html>
